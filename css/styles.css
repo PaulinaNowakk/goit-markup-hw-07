@@ -12,7 +12,7 @@ body {
   /* identical to box height */
   letter-spacing: 0.03em;
 }
-.logo-color {
+.color-blue {
   color: #2196f3;
 }
 .lists {
@@ -36,6 +36,7 @@ body {
 .contact-links:focus {
   color: #2196f3;
 }
+
 .title {
   background-color: #2f303a;
   width: 1600px;
