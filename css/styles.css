@@ -4,7 +4,7 @@ body {
 }
 .logo {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -12,8 +12,16 @@ body {
   /* identical to box height */
   letter-spacing: 0.03em;
 }
+:root {
+  --blue: #2196f3;
+  --grey: #757575;
+  --black: #000;
+  --dark-grey: #2f303a;
+  --white: #fff;
+  --creme: #f5f4fa;
+}
 .color-blue {
-  color: #2196f3;
+  color: var(--blue);
 }
 .lists {
   list-style-type: none;
@@ -26,7 +34,7 @@ body {
   letter-spacing: 0.02em;
 }
 .contact-links {
-  color: #757575;
+  color: var(--grey);
 }
 .nav-links {
   color: #212121;
@@ -34,19 +42,19 @@ body {
 .nav-links:hover,
 .contact-links:hover,
 .contact-links:focus {
-  color: #2196f3;
+  color: var(--blue);
 }
 
 .title {
-  background-color: #2f303a;
+  background-color: var(--dark-grey);
   width: 1600px;
   height: 600px;
   left: 0px;
   top: 80px;
 }
 .portfolio-button-box:hover {
-  background-color: #2196f3;
-  color: #fff;
+  background-color: var(--blue);
+  color: var(--white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -57,12 +65,12 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
 }
 
 .button-box {
   cursor: pointer;
-  background: #2196f3;
+  background: var(--blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -70,7 +78,7 @@ body {
   height: 50px;
   left: 700px;
   top: 430px;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -90,10 +98,10 @@ body {
   letter-spacing: 0.03em;
 }
 .article-item {
-  color: #757575;
+  color: var(--grey);
 }
 .text-color {
-  color: #fff;
+  color: var(--white);
 }
 
 .second-titles {
@@ -114,7 +122,7 @@ body {
   line-height: 1.18;
   /* identical to box height */
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
 }
 .address-list {
   position: absolute;
@@ -130,7 +138,7 @@ body {
   /* identical to box height, or 162% */
   letter-spacing: 0.03em;
   height: 38px;
-  background-color: #f5f4fa;
+  background-color: var(--creme);
   border: none;
   cursor: pointer;
   line-height: 1.62;
@@ -150,17 +158,17 @@ body {
   width: 91px;
 }
 .portfolio-button:hover {
-  background-color: #2196f3;
-  color: #fff;
+  background-color: var(--blue);
+  color: var(--white);
 }
 .container {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--creme);
 }
 .footer {
-  background-color: #2f303a;
+  background-color: var(--dark-grey);
 }
 .title-cards {
   font-weight: 700;
@@ -172,7 +180,7 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--grey);
 }
 .text-address {
   font-style: normal;
