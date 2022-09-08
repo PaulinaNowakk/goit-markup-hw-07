@@ -15,6 +15,9 @@ figure {
   margin: 0;
   list-style-type: none;
 }
+* :focus {
+  outline: none;
+}
 img {
   display: block;
 }
@@ -73,6 +76,7 @@ img {
   --creme: #f5f4fa;
   --almost-white: #ececec;
   --border-color: #eeeeee;
+  --icons-color: #afb1b8;
 }
 .color-blue {
   color: var(--blue);
@@ -89,6 +93,15 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
+.contact-icons {
+  fill: var(--grey);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: row;
+}
+
 .contact-links {
   color: var(--grey);
 }
@@ -96,9 +109,20 @@ img {
   color: #212121;
 }
 .nav-links:hover,
+.nav-links:focus,
 .contact-links:hover,
-.contact-links:focus {
+.contact-links:focus,
+.contact-icons:hover {
   color: var(--blue);
+  fill: var(--blue);
+}
+.article-icons-box {
+  background-color: var(--creme);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
 }
 
 .portfolio-button-box:hover {
@@ -108,7 +132,12 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .banner {
-  background-color: var(--dark-grey);
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url(../images/background.jpg);
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -178,7 +207,7 @@ img {
 }
 .team-figcaption {
   text-align: center;
-  padding: 30px 0;
+  padding: 16px 0;
 }
 .team-names {
   font-weight: 500;
@@ -195,9 +224,46 @@ img {
   letter-spacing: 0.03em;
   color: var(--grey);
 }
+.icons-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 18px;
+}
+.icons {
+  fill: var(--grey);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.icons:hover {
+  background-color: var(--blue);
+  fill: var(--white);
+  cursor: pointer;
+}
+.icons-links:focus svg,
+.icons-links:hover svg {
+  fill: var(--white);
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+.clients-icons-item {
+  fill: var(--icons-color);
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  padding: 17px 32px;
+}
 
+.svg-clients-links:focus svg,
+.svg-clients-links:hover svg {
+  fill: var(--blue);
+  border-radius: 4px;
+  border: 1px solid var(--blue);
+}
 .portfolio-button {
-  color: #212121;
   font-weight: 500;
   font-size: 16px;
   /* identical to box height, or 162% */
@@ -248,9 +314,7 @@ img {
 .team-background {
   background-color: var(--creme);
 }
-.footer-background {
-  background-color: var(--dark-grey);
-}
+
 .title-cards {
   font-weight: 700;
   font-size: 18px;
@@ -263,16 +327,42 @@ img {
   letter-spacing: 0.03em;
   color: var(--grey);
 }
-
+.footer-background {
+  background-color: var(--dark-grey);
+}
 .footer {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  gap: 70px;
+
   padding: 60px 0;
+}
+.icons-footer-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer-icons {
+  fill: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.footer-box-two-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 12px 0 20px 0;
 }
 .address-list {
   display: flex;
   flex-direction: column;
   gap: 9px;
   font-style: normal;
+  padding-top: 20px;
 }
