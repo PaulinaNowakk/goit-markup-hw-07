@@ -64,7 +64,9 @@
     <main>
       <div class="banner">
         <h1 class="banner-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button class="button-box" type="button">Zamów usługe</button>
+        <button class="button-box" type="button" data-modal-open>
+          Zamów usługe
+        </button>
       </div>
       <section class="section">
         <div class="container">
@@ -650,5 +652,21 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="window">
+        <button class="button-close" data-modal-close>
+          <svg class="button-svg">
+            <use
+              href="images/icons.svg#icon-x"
+              width="11"
+              height="11"
+              x="9"
+              y="9"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

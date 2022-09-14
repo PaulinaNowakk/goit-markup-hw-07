@@ -100,14 +100,23 @@ img {
   gap: 10px;
   align-items: center;
   flex-direction: row;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-links {
   color: var(--grey);
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-links {
   color: #212121;
   position: relative;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .blue-line::after {
   bottom: 0;
@@ -127,7 +136,56 @@ img {
 .contact-icons:hover {
   color: var(--blue);
   fill: var(--blue);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.window {
+  position: fixed;
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.button-svg {
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  cursor: pointer;
+}
+.button-close {
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: var(--white);
+  position: absolute;
 }
 .article-icons-box {
   background-color: var(--creme);
@@ -138,13 +196,6 @@ img {
   padding: 25px 0;
 }
 
-.portfolio-button-box:hover {
-  background-color: var(--blue);
-  color: var(--white);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .banner {
   background-image: linear-gradient(
       0deg,
@@ -266,15 +317,23 @@ img {
   padding-bottom: 18px;
 }
 .icons {
-  fill: var(--grey);
+  fill: var(--icons-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons:hover {
   background-color: var(--blue);
   fill: var(--white);
   cursor: pointer;
+}
+.icons-links svg {
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-links:focus svg,
 .icons-links:hover svg {
@@ -290,7 +349,11 @@ img {
   height: 92px;
   padding: 17px 32px;
 }
-
+.svg-clients-links svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .svg-clients-links:focus svg,
 .svg-clients-links:hover svg {
   fill: var(--blue);
@@ -308,6 +371,9 @@ img {
   cursor: pointer;
   line-height: 1.62;
   border-radius: 4px;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button-list {
   display: flex;
@@ -351,8 +417,9 @@ img {
 .portfolio-cards-item {
   position: relative;
   overflow: hidden;
-  transition-property: box-shadow;
-  transition-delay: 250ms;
+  transition-property: box-shadow, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
@@ -370,9 +437,10 @@ img {
   line-height: 1.56;
   /* or 156% */
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--white);
   transition-property: transform;
-  transition-delay: 250ms;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-cards-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -404,7 +472,6 @@ img {
   display: flex;
   flex-direction: row;
   gap: 70px;
-
   padding: 60px 0;
 }
 .icons-footer-box {
