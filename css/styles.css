@@ -107,7 +107,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-color-footer {
-  color: rgba(rgba(255, 255, 255, 0.6) ;);
+  color: rgba(255, 255, 255, 0.6);
 }
 .contact-links {
   color: var(--grey);
