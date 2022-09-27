@@ -1,1 +1,1 @@
-https://paulinanowakk.github.io/goit-markup-hw-05/
+https://github.com/PaulinaNowakk/goit-markup-hw-06.git
