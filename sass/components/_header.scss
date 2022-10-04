@@ -1,0 +1,7 @@
+.header {
+  padding: 24px 15px 25px 15px;
+
+  &__container {
+    @include flex-row;
+  }
+}
