@@ -1,7 +1,76 @@
 .header {
   padding: 24px 15px 25px 15px;
-
+  @include border-bottom($borderColor);
   &__container {
-    @include flex-row;
+    @include flex-row(93px);
+    align-items: center;
+  }
+  &__logo {
+    text-decoration: none;
+    color: $headerColor;
+    font-family: $secondary-font-family;
+    font-weight: map-get($font-weight, bold);
+    font-size: map-get($font-size, header);
+    line-height: map-get($line-height, logo);
+    /* identical to box height */
+    letter-spacing: map-get($letter-spacing, primary);
+  }
+  &--blue-label {
+    color: $labelColor;
+  }
+}
+
+.navigation {
+  @include flex-row(46px);
+
+  &__links {
+    color: $primaryColor;
+    position: relative;
+    @include colorFill;
+
+    &--blue-line::after {
+      bottom: 0;
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: $labelColor;
+      height: 4px;
+      width: 100%;
+      border-radius: map-get($border-radius, small);
+      transform: translateY(33px);
+    }
+
+    &:hover,
+    &:focus {
+      color: $labelColor;
+      fill: $labelColor;
+    }
+  }
+}
+
+.contact {
+  @include flex-row(30px);
+  margin-left: auto;
+
+  &__links {
+    color: $contactColor;
+    @include colorFill;
+
+    &:hover,
+    &:focus {
+      color: $labelColor;
+      fill: $labelColor;
+    }
+    &__icons {
+      align-items: center;
+      fill: $contactColor;
+      @include flex-row(10px);
+      @include colorFill;
+
+      &:hover {
+        color: $labelColor;
+        fill: $labelColor;
+      }
+    }
   }
 }

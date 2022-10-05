@@ -1,0 +1,132 @@
+$labelColor: #2196f3;
+$contactColor: #757575;
+$primaryColor: #212121;
+$generalColor: #fff;
+$headerColor: #000;
+$svgColor: #f5f4fa;
+$overlayColor: rgba(47, 48, 58, 0.8);
+$teambackgroundColor: #f5f4fa;
+$iconsColor: #afb1b8;
+$footerbackgroundColor: #2f303a;
+$footerlinkColor: rgba(255, 255, 255, 0.6);
+$modalColor: rgba(0, 0, 0, 0.2);
+$borderColor: #ececec;
+$cardsColor: #eeeeee;
+
+$primary-font-family: "Roboto", sans-serif;
+$secondary-font-family: "Raleway", sans-serif;
+
+$font-weight: (
+  "primary": 400,
+  "medium": 500,
+  "bold": 700,
+  "super-bold": 900,
+);
+
+$font-size: (
+  "primary": 14px,
+  "modal": 12px,
+  "buttons": 16px,
+  "cards": 18px,
+  "modaltitle": 20px,
+  "header": 26px,
+  "titles": 36px,
+  "banner": 44px,
+);
+
+$line-height: (
+  "primary": 1.14,
+  "title": 1.15,
+  "secondtitles": 1.16,
+  "names": 1.18,
+  "logo": 1.19,
+  "placeholder": 1.25,
+  "banner": 1.36,
+  "overlay": 1.55,
+  "portfoliobutton": 1.62,
+  "checkbox": 1.71,
+  "buttons": 1.88,
+  "biggest": 2,
+);
+
+$letter-spacing: (
+  "small": 0.01em,
+  "medium": 0.02em,
+  "primary": 0.03em,
+  "big": 0.06em,
+);
+$border-radius: (
+  "circle": 50%,
+  "primary": 4px,
+  "small": 2px,
+);
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin transform {
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin visibilityOpacity {
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionColor {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionBackgroundColor {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin background-colorColor {
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin colorFill {
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin background-colorFill {
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-border {
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin borderFill {
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionFill {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionBox-shadow {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

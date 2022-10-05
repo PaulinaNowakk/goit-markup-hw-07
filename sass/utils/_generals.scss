@@ -1,0 +1,26 @@
+body {
+  color: $primaryColor;
+  font-family: $primary-font-family, $secondary-font-family;
+}
+.section {
+  padding: 94px 0;
+}
+.section2 {
+  padding-top: 0;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 1600px;
+  margin: 0 auto;
+}
+.links {
+  text-decoration: none;
+  font-weight: map-get($font-weight, medium);
+  font-size: map-get($font-size, primary );
+  line-height: map-get($line-height, primary);
+  letter-spacing: map-get($letter-spacing, medium );
+}

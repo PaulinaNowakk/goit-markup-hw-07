@@ -1,4 +1,17 @@
-@mixin flex-row {
+@mixin flex-row($gap) {
+  gap: $gap;
   display: flex;
   flex-direction: row;
+}
+@mixin flex-column($gap) {
+  gap: $gap;
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin border-bottom($color) {
+  border: 1px solid $color;
 }
